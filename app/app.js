@@ -1,33 +1,42 @@
-const trophies=(await (await fetch('data/trophies.json')).json()).trophies;
-const KEY='leonida-ledger-v1';
+const trophies = (await (await fetch('data/trophies.json')).json()).trophies;
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let state;
-try {state=JSON.parse(localStorage.getItem(KEY)||'{"earned":[],"spoilers":true}');if(!Array.isArray(state.earned))throw Error();}
-catch {state={earned:[],spoilers:true};}
-if(new URLSearchParams(location.search).has('sample')&&!localStorage.getItem(KEY)){state={earned:[2,3,4,8,9,16,20,21,35,42,48,53],spoilers:true,sample:true};save();}
-let kind='all',selected=28;
-const $=id=>document.getElementById(id);
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function save(){localStorage.setItem(KEY,JSON.stringify(state));}
-function concealed(t){return state.spoilers&&t.kind==='story'&&!state.earned.includes(t.id);}
-function render(){
- $('spoilers').checked=state.spoilers;
- $('summary').innerHTML=`<strong>${state.earned.length} / 55</strong> earned · Saved on this device <span style="float:right">${['platinum','gold','silver','bronze'].map(g=>`${g} ${trophies.filter(t=>t.grade===g&&state.earned.includes(t.id)).length}/${trophies.filter(t=>t.grade===g).length}`).join(' · ')}</span><progress value="${state.earned.length}" max="55"></progress>`;
- $('sample').innerHTML=state.sample?'Sample progress — clear it to start your own <button id="clear">Clear sample</button>':'';
- if($('clear'))$('clear').onclick=()=>{state.earned=[];state.sample=false;save();render();};
- $('filters').innerHTML=['all','story','missable','collectibles','activities','misc'].map(k=>`<button data-kind="${k}" class="${k===kind?'active':''}">${k} · ${trophies.filter(t=>k==='all'||t.kind===k).length}</button>`).join('');
- $('filters').querySelectorAll('button').forEach(b=>b.onclick=()=>{kind=b.dataset.kind;location.hash='filter='+kind;render();});
- const list=trophies.filter(t=>(kind==='all'||t.kind===kind)&&($('grade').value==='all'||t.grade===$('grade').value)&&($('status').value==='all'||state.earned.includes(t.id)===($('status').value==='earned'))&&(!concealed(t)?t.name.toLowerCase().includes($('search').value.toLowerCase()):!$('search').value));
- $('rows').innerHTML=`<small>${list.length} TROPHIES IN THIS VIEW</small>`+list.map(t=>`<div class="row"><input aria-label="Mark trophy ${t.id} earned" type="checkbox" data-id="${t.id}" ${state.earned.includes(t.id)?'checked':''}><button data-open="${t.id}"><strong>${concealed(t)?'Hidden story trophy — earn it to reveal':esc(t.name)}</strong><p>${concealed(t)?'Story details protected':esc(t.description)}</p><span class="grade"><i class="disc ${t.grade}"></i>${t.grade} · ${t.kind}${t.missable?' · MISSABLE':''}</span></button></div>`).join('');
- $('rows').querySelectorAll('input').forEach(b=>b.onchange=()=>{state.earned=b.checked?[...state.earned,Number(b.dataset.id)]:state.earned.filter(id=>id!==Number(b.dataset.id));save();render();});
- $('rows').querySelectorAll('button').forEach(b=>b.onclick=()=>{location.hash='trophy='+b.dataset.open;});
- const t=trophies.find(t=>t.id===selected)||trophies[0];
- $('detail').innerHTML=`<span class="tag">FIELD NOTES / ${t.missable?'MISSABLE':'TROPHY GUIDE'}</span><h2>${concealed(t)?'Hidden story trophy — earn it to reveal':esc(t.name)}</h2><span class="grade">${t.grade} / ${t.kind} / STAGE ${t.stage}</span><p>${concealed(t)?'Earn this trophy to reveal its description and guide.':esc(t.description)}</p>${concealed(t)?'':`<p>${esc(t.guide)}</p><ol>${(t.steps||[]).map(s=>`<li>${esc(s)}</li>`).join('')}</ol><small>SOURCES / READ FURTHER</small><p>${t.sources.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noreferrer">${esc(s.name)} ↗</a>`).join('<br>')}</p>`}`;
- const road=location.hash==='#roadmap';document.body.classList.toggle('focused',road||location.hash.startsWith('#trophy=')||kind==='missable');$('workspace').hidden=road;$('roadmap').hidden=!road;
+try { state = JSON.parse(localStorage.getItem('ledger')) || {}; } catch { state = {}; }
+if (new URLSearchParams(location.search).has('sample') && !state.initialized) state = {earned:trophies.filter(t=>t.id!==1).slice(0,12).map(t=>t.id),sample:true};
+state.earned ||= [];
+let kind = '', grade = '', status = '', query = '';
+const save = () => { state.initialized = true; localStorage.setItem('ledger',JSON.stringify(state)); };
+const earned = t => state.earned.includes(t.id);
+const concealed = t => $('#spoilers').checked && t.kind === 'story' && !earned(t);
+const name = t => concealed(t) ? 'Hidden story trophy — earn it to reveal' : t.name;
+function render() {
+ save();
+ $('#notice').textContent = state.sample ? 'Sample progress — clear it to start your own' : 'Your progress is saved on this device.';
+ $('#progress').innerHTML = `<strong>${state.earned.length} / 55 <em>ON THE ROAD TO PLATINUM</em></strong><progress max="55" value="${state.earned.length}"></progress><p>${['platinum','gold','silver','bronze'].map(g=>`${g.toUpperCase()} ${trophies.filter(t=>t.grade===g&&earned(t)).length}/${trophies.filter(t=>t.grade===g).length}`).join('　 /　 ')}</p>`;
+ const hash = location.hash;
+ if (hash === '#roadmap') { roadmap(); return; }
+ if (hash === '#spoilers=on') $('#spoilers').checked = true;
+ if (hash === '#filter=missable') kind = 'missable';
+ $('#filters').hidden = false;
+ $('#filters').innerHTML = `<input id="search" placeholder="Search trophy names" value="${esc(query)}"><select id="kind"><option value="">All kinds · 55</option>${['story','missable','collectibles','activities','misc'].map(k=>`<option value="${k}" ${kind===k?'selected':''}>${k} · ${trophies.filter(t=>t.kind===k).length}</option>`).join('')}</select><select id="grade"><option value="">All grades · 55</option>${['platinum','gold','silver','bronze'].map(g=>`<option ${grade===g?'selected':''}>${g}</option>`).join('')}</select><select id="status"><option value="">All progress · 55</option><option value="earned" ${status==='earned'?'selected':''}>Earned · ${state.earned.length}</option><option value="remaining" ${status==='remaining'?'selected':''}>Remaining · ${55-state.earned.length}</option></select>`;
+ $('#search').oninput = e => { const cursor=e.target.selectionStart; query=e.target.value; render(); $('#search').focus(); $('#search').setSelectionRange(cursor,cursor); };
+ for (const key of ['kind','grade','status']) $('#'+key).onchange = e => { if(key==='kind') kind=e.target.value; if(key==='grade') grade=e.target.value; if(key==='status') status=e.target.value; render(); };
+ const selected = trophies.find(t=>hash===`#trophy=${t.id}`);
+ const list = trophies.filter(t=>(!kind||t.kind===kind)&&(!grade||t.grade===grade)&&(!status||(status==='earned'?earned(t):!earned(t)))&&name(t).toLowerCase().includes(query.toLowerCase()));
+ $('#content').innerHTML = selected ? detail(selected) : `<h2>${kind==='missable'?'The one to watch':'The trophy ledger'} <small>${list.length} entries</small></h2>`+list.map(t=>`<article><input aria-label="Mark ${esc(name(t))} earned" type="checkbox" data-id="${t.id}" ${earned(t)?'checked':''}><span class="disc ${t.grade}"></span><a href="#trophy=${t.id}"><b>${esc(name(t))}</b><p>${esc(concealed(t)?'Story details protected until earned.':t.description)}</p></a><span class="tag">${t.missable?'MISSABLE':t.grade.toUpperCase()}</span></article>`).join('');
+ document.querySelectorAll('[data-id]').forEach(el=>el.onchange=()=>{const id=Number(el.dataset.id); state.earned=el.checked?[...new Set([...state.earned,id])]:state.earned.filter(x=>x!==id); render();});
 }
-$('roadmap').innerHTML=`<h2>Your route to a Leonida legend.</h2><p class="warning"><b>ONE MISSABLE / Positive Mental Attitude</b> — After Down to Earth, join Lucia on Jason's balcony in Chapter 1. Keep a Chapter 1 manual save until all 18 meditations are done. No mission replay or New Game Plus. Balcony requirement is not fully confirmed: do it anyway.</p><div class="stages"><article><small>01 / 60–80 HOURS</small><h3>Story first</h3><p>Gone Fishing → Chapters 1–4 → final mission. Five chapters in total.</p><p>Save at each chapter boundary and before the finale; 15 manual slots. In Chapter 3, save before the hourglass-marked Race Against Yago and do it immediately.</p><p>Scan traffic and study animals early: 200 base models and 100 animals for 100%. Avoid cheats: they disable trophies and saving.</p></article><article><small>02 / ABOUT 100 HOURS</small><h3>Build to 100%</h3><p>Progress → Stats → 100% Completion. Fund gear through robberies and fencing.</p><p>39 gang operations, 22 bank jobs, 7 payday loans, 8 vaults. Cards 15 sets; WAiNK 100; underwater discoveries 33; flamingos 100.</p><p>30 race wins, 42 range golds, 42 drone trials, 300 stunts, 70 challenges, 15 Bret target decks. See A Long Road for the full list.</p></article><article><small>03 / 10–20 HOURS</small><h3>Close loose ends</h3><p>Finish 8 qualifying stranger strands. Andy, Billy and Tyrone do not count toward that total.</p><p>Finish Andy, Kenton, Billy, Randy and Tyrone's finales. Meditate at all 18 spots (100% only needs 15).</p><p>Earn the other 54 for Vice Got a Price! Approximately 200 hours, one playthrough, difficulty 4/10.</p><small>SOURCES: KEENGAMER / GTABASE</small></article></div>`;
-for(const id of ['search','grade','status'])$(id).oninput=render;
-$('spoilers').onchange=()=>{state.spoilers=$('spoilers').checked;save();render();};
-$('export').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'}));a.download='leonida-progress.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
-$('import').onchange=async e=>{try{const s=JSON.parse(await e.target.files[0].text());if(!Array.isArray(s.earned)||s.earned.some(id=>!trophies.some(t=>t.id===id)))throw Error('Invalid trophy IDs');state={earned:[...new Set(s.earned)],spoilers:s.spoilers!==false,sample:!!s.sample};save();render();$('notice').textContent='Progress restored.';}catch{$('notice').textContent='Could not import: choose a valid progress JSON file.'}};
-function route(){const h=location.hash.slice(1);if(h.startsWith('trophy='))selected=Number(h.split('=')[1]);if(h.startsWith('filter='))kind=h.split('=')[1];if(h==='spoilers=on'){state.spoilers=true;save();}render();}
-window.onhashchange=route;route();
+function detail(t) {
+ return `<a href="#">← Back to checklist</a><section class="detail"><p class="eyebrow">${t.grade} / ${t.kind} / ROADMAP STAGE ${t.stage}${t.missable&&t.kind!=='missable'?' / MISSABLE':''}</p><h2>${esc(name(t))}</h2><p>${esc(concealed(t)?'Earn this story trophy to reveal its details.':t.description)}</p>${concealed(t)?'':`<h3>Field guide</h3><p>${esc(t.guide)}</p><ol>${(t.steps||[]).map(s=>`<li>${esc(s)}</li>`).join('')}</ol><h3>Sources & further reading</h3>${t.sources.map(s=>`<a class="source" href="${esc(s.url)}" target="_blank" rel="noreferrer">${esc(s.name)} ↗</a>`).join('')}`}</section>`;
+}
+function roadmap() {
+ $('#filters').hidden=true;
+ $('#content').innerHTML=`<h2>Your route to Leonida Legend</h2><aside>MISSABLE · Positive Mental Attitude<br>After Down to Earth in Chapter 1, join Lucia on Jason’s balcony in the morning. Keep a Chapter 1 manual save until the trophy pops; the balcony requirement is still being confirmed. No mission replay or New Game Plus.</aside><div class="stages"><section><i>01 / STORY</i><h3>Protect your first chapter</h3><p>Gone Fishing → Chapters 1–5 → final mission. Save at each chapter start and before the finale. Avoid cheats: they disable trophies and saving.</p><p>After Down to Earth, do the balcony meditation. Save before Yago’s Chapter 3 hourglass races.</p></section><section><i>02 / EXPLORE</i><h3>Work the whole state</h3><p>Finish 8 stranger strands. Track all 18 meditation spots, 100 WAiNK locations, 3 card sets and 250 stunts for their trophies.</p><p>Chapter 4: That’s Where The Money Is opens vault jobs. Bring your partner for 5 vault escapes.</p></section><section><i>03 / CLEANUP</i><h3>Close the ledger</h3><p>Use Progress → Stats → 100% Completion after the story. Finish 42 range golds, 42 drone trials, 300 stunts, 33 underwater discoveries and 100 flamingos.</p><p>100% also needs 15 card sets and 15 meditations. Earn all other 54 trophies for platinum. Allow roughly 200 hours.</p></section></div>`;
+}
+$('#spoilers').onchange=render;
+$('#clear').onclick=()=>{state={earned:[],initialized:true};render();};
+$('#export').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(state)],{type:'application/json'}));a.download='leonida-progress.json';a.click();URL.revokeObjectURL(a.href);};
+$('#import').onchange=async e=>{try {const data=JSON.parse(await e.target.files[0].text());if(!Array.isArray(data.earned)||data.earned.some(id=>!trophies.some(t=>t.id===id)))throw Error('Invalid trophy IDs');state={earned:[...new Set(data.earned)],sample:!!data.sample};render();}catch(error){$('#notice').textContent='Import failed: '+error.message;}};
+addEventListener('hashchange',render);
+render();
