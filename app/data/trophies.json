@@ -8,385 +8,385 @@
    "name": "Vice Got a Price!",
    "description": "Congratulations! You're a Leonida Legend.",
    "grade": "platinum",
-   "guide": "Earn the other 54 trophies."
+   "guide": "Complete the other 54 awards on the same save. Plan around the Chapter 1 meditation before beginning the roughly 200-hour completion route.", "kind":"misc", "hidden":false, "missable":false, "stage":3, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 2,
    "name": "Just Like Paradise",
    "description": "Complete Gone Fishing.",
    "grade": "bronze",
-   "guide": "Finish the opening mission, Gone Fishing."
+   "guide": "Follow the opening story assignment Gone Fishing through its conclusion. This is automatic story progress; no optional objective is required.", "kind":"story", "hidden":true, "missable":false, "stage":1, "sources":[{"name":"OutputLag","url":"https://outputlag.com/guides/gta-6-trophy-list/"}]
   },
   {
    "id": 3,
    "name": "Paradise Lost",
    "description": "Complete Chapter 1.",
    "grade": "bronze",
-   "guide": "Finish Chapter 1."
+   "guide": "Continue the main missions until Chapter 1 ends. Before moving on, join Lucia's balcony meditation after Down to Earth and retain a manual save for Positive Mental Attitude.", "kind":"story", "hidden":true, "missable":false, "stage":1, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 4,
    "name": "T**s Ass Drug Money",
    "description": "Complete Chapter 2.",
    "grade": "bronze",
-   "guide": "Finish Chapter 2."
+   "guide": "Work through Chapter 2's main assignments. Use Daily Driver to unlock garage purchases and Moses to open vehicle registration along the way. The chapter award is automatic.", "kind":"story", "hidden":true, "missable":false, "stage":1, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 5,
    "name": "Vice City, Baby!",
    "description": "Complete Chapter 3.",
    "grade": "bronze",
-   "guide": "Finish Chapter 3."
+   "guide": "Finish the main Chapter 3 sequence. Save and complete the hourglass-marked Race Against Yago as soon as it appears; that optional strand is time-sensitive even though this chapter trophy is not.", "kind":"story", "hidden":true, "missable":false, "stage":1, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 6,
    "name": "Top Of The World, Ma",
    "description": "Complete Chapter 4.",
    "grade": "bronze",
-   "guide": "Finish Chapter 4."
+   "guide": "Advance the main story to the end of Chapter 4. Near its end, take the optional That's Where The Money Is mission to unlock vault robberies for later cleanup.", "kind":"story", "hidden":true, "missable":false, "stage":1, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 7,
    "name": "You Gotta Know When to Get Off",
    "description": "Complete the final mission.",
    "grade": "gold",
-   "guide": "Finish the final mission (gold)."
+   "guide": "Finish the last main mission after progressing through all five chapters. Keep a separate manual save before starting the finale; other cleanup remains available in free roam.", "kind":"story", "hidden":true, "missable":false, "stage":1, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 8,
    "name": "Trust",
    "description": "Complete Breakfast Run.",
    "grade": "bronze",
-   "guide": "Finish the mission Breakfast Run."
+   "guide": "Follow the main-story mission chain to Breakfast Run and complete its objectives. It unlocks through normal story progress and has no separate missable condition.", "kind":"story", "hidden":true, "missable":false, "stage":1, "sources":[{"name":"OutputLag","url":"https://outputlag.com/guides/gta-6-trophy-list/"}]
   },
   {
    "id": 9,
    "name": "Break the Bank",
    "description": "Complete The Cartel Heist.",
    "grade": "bronze",
-   "guide": "Finish the mission The Cartel Heist."
+   "guide": "Advance the main story until The Cartel Heist becomes available, then finish the assignment. No mission medal or difficulty requirement is attached to this story award.", "kind":"story", "hidden":true, "missable":false, "stage":1, "sources":[{"name":"OutputLag","url":"https://outputlag.com/guides/gta-6-trophy-list/"}]
   },
   {
    "id": 10,
    "name": "Family Matters",
    "description": "Complete Child's Play.",
    "grade": "bronze",
-   "guide": "Finish the mission Child's Play."
+   "guide": "Play the main mission Child's Play to its conclusion. This is an automatic story unlock rather than an optional challenge, so continue the campaign normally.", "kind":"story", "hidden":true, "missable":false, "stage":1, "sources":[{"name":"OutputLag","url":"https://outputlag.com/guides/gta-6-trophy-list/"}]
   },
   {
    "id": 11,
    "name": "DWNFALL",
    "description": "Complete Headliners.",
    "grade": "bronze",
-   "guide": "Finish the mission Headliners."
+   "guide": "Complete Headliners when the campaign leads you to it. The award is tied to finishing the mission, with no mission-medal target to grind.", "kind":"story", "hidden":true, "missable":false, "stage":1, "sources":[{"name":"OutputLag","url":"https://outputlag.com/guides/gta-6-trophy-list/"}]
   },
   {
    "id": 12,
    "name": "Hi-Jacked",
    "description": "Complete VCIA Takedown.",
    "grade": "bronze",
-   "guide": "Finish the mission VCIA Takedown."
+   "guide": "Continue the campaign to VCIA Takedown and finish the mission. Do not confuse this story unlock with the separate passenger-plane theft trophy at VCIA.", "kind":"story", "hidden":true, "missable":false, "stage":1, "sources":[{"name":"OutputLag","url":"https://outputlag.com/guides/gta-6-trophy-list/"}]
   },
   {
    "id": 13,
    "name": "Snow Storm",
    "description": "Complete Operation Savage Glory.",
    "grade": "bronze",
-   "guide": "Finish the mission Operation Savage Glory."
+   "guide": "Complete Operation Savage Glory through the main-story chain. Normal mission completion is sufficient; this award is not a free-roam tank challenge.", "kind":"story", "hidden":true, "missable":false, "stage":1, "sources":[{"name":"OutputLag","url":"https://outputlag.com/guides/gta-6-trophy-list/"}]
   },
   {
    "id": 14,
    "name": "A Long Road",
    "description": "Attain 100% Completion.",
    "grade": "gold",
-   "guide": "Reach 100% completion (gold)."
+   "guide": "After the finale, use Progress > Stats > 100% Completion as your checklist; earlier work counts. Clear 39 gang operations, 22 bank jobs, 7 payday loans, 34 smash-and-grabs, 50 stick-ups and all 8 vaults. Fence narcotics and jewelry worth $100,000 each, marked bills worth $250,000 and vehicles worth $200,000. Collect 5 treasure sets, 15 card sets, 100 WAiNK locations, 33 underwater discoveries, 30 reading items, 15 meditations, 100 flamingos, 2 playlists, 70 styles, 200 base vehicles, 50 weapons and study 100 animals. Activities need 30 races, 10 race challenge golds, 42 range golds, all 4 video games played, 5 pool opponents, 2 mini-golf locations, 90 hoops, 42 drone trials, 300 stunts, 70 challenges and 15 target decks. Also finish the story and 100 optional tasks.", "kind":"misc", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 15,
    "name": "Cunning Stunts",
    "description": "Complete 250 Stunts.",
    "grade": "silver",
-   "guide": "Pull off 250 stunts (silver)."
+   "guide": "Mix stunt jumps, bridge flights, knife flights and base jumps to reach 250 completed stunts. Keep going to 300 for the completion checklist; cleanup remains available after the story.", "kind":"activities", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 16,
    "name": "Master of None",
    "description": "Try each type of activity once.",
    "grade": "bronze",
-   "guide": "Try all 9 activity types once."
+   "guide": "Sample each of the nine activity categories rather than repeating one favorite. Track which types you have tried as you explore; this can be finished in post-story free roam.", "kind":"activities", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 17,
    "name": "The Shootist",
    "description": "Earn a gold medal in all Shooting Range challenges.",
    "grade": "silver",
-   "guide": "Gold all 42 Shooting Range challenges (silver)."
+   "guide": "Visit both shooting ranges and earn gold in every challenge, 42 medals in total. Revisit unfinished challenges during cleanup; the full set also satisfies the 100% requirement.", "kind":"activities", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 18,
    "name": "Top Fun",
    "description": "Win a Top Fun Drone Race at every location.",
    "grade": "bronze",
-   "guide": "Win a Top Fun drone race at all 14 locations."
+   "guide": "Record a drone-race victory at each of the 14 Top Fun locations. Repeating one venue does not replace visiting the others. The 100% route additionally needs all 42 drone time trials.", "kind":"activities", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 19,
    "name": "Earn Cash, Not Kudos",
    "description": "Win 20 different races.",
    "grade": "bronze",
-   "guide": "Win 20 different races."
+   "guide": "Choose distinct races and record 20 wins; repeated wins on one course do not meet the different-races requirement. Continue to 30 of the 40 races for 100% completion.", "kind":"activities", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 20,
    "name": "Baited My Tackle",
    "description": "Beat Cal in a fishing challenge.",
    "grade": "bronze",
-   "guide": "Beat Cal in a fishing challenge."
+   "guide": "Take Cal's fishing challenge and finish ahead of him. This optional activity remains available for cleanup, so return later if your first attempt fails; no exact fishing location is established in this brief.", "kind":"activities", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 21,
    "name": "Stick Fiddler",
    "description": "Complete an arcade game.",
    "grade": "bronze",
-   "guide": "Finish one arcade game."
+   "guide": "Play an arcade game through to completion rather than just starting a session. One completed game earns this award; separately, play all four video games for the completion checklist.", "kind":"activities", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 22,
    "name": "Road to Rehabilitation",
    "description": "Complete the final mission for Andy.",
    "grade": "bronze",
-   "guide": "Finish Andy's last mission."
+   "guide": "Keep following Andy's optional mission strand until its finale is complete. You can return after the story. Andy's strand does not contribute to the eight required for Strangers & Freaks.", "kind":"activities", "hidden":true, "missable":false, "stage":3, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 23,
    "name": "This Was No Boat Accident",
    "description": "Complete the final mission for Kenton.",
    "grade": "bronze",
-   "guide": "Finish Kenton's last mission."
+   "guide": "Complete Kenton's optional assignments in sequence through his final mission. His storyline stays available after the campaign, so it can be left for the cleanup stage.", "kind":"activities", "hidden":true, "missable":false, "stage":3, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 24,
    "name": "The Lone Rider",
    "description": "Complete the final mission for Billy.",
    "grade": "bronze",
-   "guide": "Finish Billy's last mission."
+   "guide": "Follow Billy's side missions through their finale, including after the campaign if needed. This strand has its own award and does not count toward Strangers & Freaks.", "kind":"activities", "hidden":true, "missable":false, "stage":3, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 25,
    "name": "Strangers & Freaks",
    "description": "Complete 8 mission strands for strangers across the state of Leonida.",
    "grade": "silver",
-   "guide": "Finish 8 stranger strands (silver)."
+   "guide": "Complete eight qualifying optional mission strands and check the trophy counter after each finale. Andy, Billy and Tyrone do not count. Save before Race Against Yago in Chapter 3 and complete it when its hourglass icon appears; the rest can be cleaned up later.", "kind":"activities", "hidden":false, "missable":false, "stage":3, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 26,
    "name": "Supply & Demand",
    "description": "Complete the final mission for Randy.",
    "grade": "bronze",
-   "guide": "Finish Randy's last mission."
+   "guide": "Return to Randy's optional mission chain until you finish its final assignment. This strand stays open after the main story, so you can complete it during cleanup.", "kind":"activities", "hidden":true, "missable":false, "stage":3, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 27,
    "name": "Spin On This!",
    "description": "Complete the final mission for Tyrone.",
    "grade": "bronze",
-   "guide": "Finish Tyrone's last mission."
+   "guide": "Finish Tyrone's side-story finale after completing his preceding assignments. It remains open after the campaign. Do not include this strand in your Strangers & Freaks total.", "kind":"activities", "hidden":true, "missable":false, "stage":3, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 28,
    "name": "Positive Mental Attitude",
    "description": "Meditate at every spot across Leonida.",
    "grade": "bronze",
-   "guide": "Meditate at all 18 spots."
+   "guide": "Visit all 18 meditation spots. Protect the Chapter 1 balcony encounter: after Down to Earth, find Lucia at Jason's house in the morning, follow her onto the balcony and accept meditation. It disappears after Chapter 1. Its necessity is not fully confirmed: do it anyway and keep a Chapter 1 save until the trophy pops. No mission replay or New Game Plus can recover it. Outdoor spots count for both characters when you bring your partner; 100% only requires 15 meditations, but this trophy requires all 18.", "kind":"missable", "hidden":false, "missable":true, "stage":1, "steps":["Keep a manual Chapter 1 save; there are 15 slots.","After Down to Earth, join Lucia's morning balcony meditation.","Bring your partner to outdoor spots and finish all 18.","Retain the early save until the trophy unlocks."], "sources":[{"name":"Keengamer — trophy guide & roadmap","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 29,
    "name": "Fair Game",
    "description": "Hunt a unique animal for Bret.",
    "grade": "bronze",
-   "guide": "Hunt the unique animal for Bret."
+   "guide": "Play as Jason and follow Bret Vogel's hunting assignments through his target decks. Aim for a clean head or heart shot to preserve the carcass. The completion route eventually needs all 15 decks; this trophy asks for one unique animal.", "kind":"activities", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 30,
    "name": "Don't Touch My Deck",
    "description": "Complete 3 Collectible Card sets.",
    "grade": "silver",
-   "guide": "Complete 3 collectible card sets (silver)."
+   "guide": "Collect cards until three complete sets are registered; three loose cards are not enough. Continue collecting toward 15 of the 18 sets for 100%. This is free-roam cleanup, not a story deadline.", "kind":"collectibles", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 31,
    "name": "You WAiNKer!",
    "description": "WAiNK It at 100 locations.",
    "grade": "silver",
-   "guide": "WAiNK It at 100 locations (silver)."
+   "guide": "Use WAiNK at 100 different locations as you explore Leonida. Keep location progress separate from scanning vehicles, which contributes to Whip It Good. The same 100 locations are required for 100%.", "kind":"collectibles", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 32,
    "name": "One Last Thing",
    "description": "Complete 50 Challenges.",
    "grade": "bronze",
-   "guide": "Finish 50 challenges."
+   "guide": "Open Progress > Challenges and work through 50 entries, choosing unfinished tasks rather than repeating completed ones. Continue to 70 of the 80 listed challenges for the 100% route.", "kind":"activities", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 33,
    "name": "Hot Together",
    "description": "Lose a 4 star Wanted Level with your partner and escape the heat.",
    "grade": "bronze",
-   "guide": "Lose a 4-star wanted level with your partner."
+   "guide": "Bring your partner on a bank-vault robbery to generate four stars, then escape together. Keep driving beyond the red heat zone: losing the flashing search area alone is not enough. This remains available after the story.", "kind":"misc", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 34,
    "name": "Retail Therapy",
    "description": "Rob 3 shops back-to-back with your partner without losing your Wanted Level.",
    "grade": "bronze",
-   "guide": "Rob 3 shops in a row with your partner, keeping your wanted level."
+   "guide": "After Coffee Break in Chapter 2, call your partner and rob three shops while police pursuit stays active. If the stars disappear and only the heat zone remains, restart the chain. Allow roughly 30 seconds after the third shop for the award.", "kind":"misc", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 35,
    "name": "Whip It Good",
    "description": "Discover 100 vehicles.",
    "grade": "bronze",
-   "guide": "Discover 100 vehicles."
+   "guide": "Scan unfamiliar traffic using WAiNK while travelling between missions; scanning counts as discovering a vehicle. Reach 100 discoveries for the trophy, then work toward 200 base models for 100%.", "kind":"collectibles", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 36,
    "name": "Gunslinger",
    "description": "Take down 5 enemies in a single use of Combat Focus.",
    "grade": "bronze",
-   "guide": "Down 5 enemies in one Combat Focus."
+   "guide": "Find a group of gang guards at an illegal operation and equip an assault rifle. While aiming, press L3 and R3 to enter Combat Focus, then defeat five enemies before it ends. Adrenaline extends the window.", "kind":"misc", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 37,
    "name": "Catch Me If You Can",
    "description": "Make an unscheduled departure at VCIA.",
    "grade": "bronze",
-   "guide": "Leave VCIA in an unscheduled way."
+   "guide": "Save before entering VCIA. Steal a large passenger plane attached to a boarding bridge; gates E3 and E4 work, while remote parked planes do not. Reverse toward the runway, take off and fly about a kilometre away for the delayed unlock.", "kind":"misc", "hidden":true, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 38,
    "name": "Challenging Tank",
    "description": "Kinda hot in these Rhinos.",
    "grade": "bronze",
-   "guide": "Deal with Rhinos (tanks)."
+   "guide": "Make a manual save, then visit the south side of Mile Zero Air Station on the far southwestern island. Enter a parked Rhino and drive and fire it until the trophy registers. Return in free roam if needed.", "kind":"misc", "hidden":true, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 39,
    "name": "Sneakthief",
    "description": "Rob a jewelry store without being detected.",
    "grade": "bronze",
-   "guide": "Rob a jewelry store without being seen."
+   "guide": "Complete Yasmani's Jewelry Jobs in Chapter 3 for the Snap Gun. At Richardson Jewelry & Diamonds in Vice City, use it on the back door instead of kicking the door. Read the safe-code note in the back room, empty the safe and leave unseen. Reload if detected.", "kind":"misc", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 40,
    "name": "Maximum Withdrawal",
    "description": "Rob 5 Bank Vaults and escape.",
    "grade": "silver",
-   "guide": "Rob 5 bank vaults and escape (silver)."
+   "guide": "Unlock vault jobs with That's Where The Money Is near the end of Chapter 4. Follow an armored security van to a large bank and enter while the guard opens the vault. Bring your partner for the bags and escape the immediate four-star response. Finish five vault robberies; all eight are needed for 100%.", "kind":"activities", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 41,
    "name": "A Classic Blitz Play",
    "description": "Rob an Armored Truck and escape.",
    "grade": "bronze",
-   "guide": "Rob an armored truck and escape."
+   "guide": "Rob an armored truck during free roam, then keep escaping until you are outside the heat zone. Clearing the immediate police search without leaving the heat zone does not finish the escape requirement.", "kind":"misc", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 42,
    "name": "The Goodtime State",
    "description": "Explore all of Leonida.",
    "grade": "bronze",
-   "guide": "Explore all 52 areas of Leonida."
+   "guide": "Travel throughout Leonida and fill in unexplored parts of the map while doing collectibles and side missions. The supplied research confirms statewide exploration but not a precise area count, so use the in-game progress rather than an assumed total.", "kind":"misc", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 43,
    "name": "Pest Control",
    "description": "Rob an Illegal Operation belonging to each gang.",
    "grade": "bronze",
-   "guide": "Rob one illegal operation of each of the 9 gangs."
+   "guide": "Track which gang owns each illegal operation and rob at least one belonging to all nine gangs. Repeating the same gang does not cover another. For 100%, continue through all 39 operations.", "kind":"activities", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 44,
    "name": "In The Beginning…",
    "description": "Enjoy a cocktail with a view on Ocean Beach.",
    "grade": "bronze",
-   "guide": "Have a cocktail with a view on Ocean Beach."
+   "guide": "The description points to a cocktail with a view at Ocean Beach, but the exact trigger is still being confirmed. No specific venue or interaction sequence is verified here. Leave this for free-roam cleanup rather than trusting an invented location.", "kind":"misc", "hidden":true, "missable":false, "stage":3, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 45,
    "name": "Capital Offense",
    "description": "Smash your way out of a vehicle showroom in classic style.",
    "grade": "bronze",
-   "guide": "Smash out of a vehicle showroom in style."
+   "guide": "The trophy calls for a classic-style escape through a vehicle showroom, but the exact trigger is still being confirmed. A particular vehicle, showroom or exit cannot yet be recommended as fact. It is not flagged as missable.", "kind":"misc", "hidden":true, "missable":false, "stage":3, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 46,
    "name": "Let’s Go Bowling",
    "description": "Follow-through at the Kolt & Associates' bowling alley.",
    "grade": "bronze",
-   "guide": "Play bowling at the Kolt & Associates alley."
+   "guide": "This is a robbery at Kingpin Bowling, the Chapter 2 illegal operation, not a normal bowling match. Bring Sticky Bombs. Take the office luxury watch, the shotgun on a table and the office safe contents; blast the safe open, then escape police. The operation returns if you leave valuables behind.", "kind":"misc", "hidden":true, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 47,
    "name": "Personal Best",
    "description": "A partnership with mass appeal.",
    "grade": "bronze",
-   "guide": "A partnership moment with mass appeal."
+   "guide": "Buy a gym membership and train with your partner so both characters work out together. Raise both Jason and Lucia to maximum Strength; improving only one character does not meet the requirement. Finish this in free roam.", "kind":"activities", "hidden":true, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 48,
    "name": "Actions Speak Louder",
    "description": "Choices made (for better or worse).",
    "grade": "bronze",
-   "guide": "Make choices (PSN tracks a count to 500)."
+   "guide": "Perform 500 actions that alter your Criminal Profile. Robberies and fights contribute, so work through the completion route before considering a separate grind. This cumulative target can be finished after the campaign.", "kind":"misc", "hidden":true, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 49,
    "name": "Bad Luck, I Guess",
    "description": "Second time's the charm.",
    "grade": "bronze",
-   "guide": "Succeed on a second try."
+   "guide": "The exact trigger is still being confirmed. The published description alone does not establish that retrying any activity works, so do not grind generic second attempts. Keep this on the cleanup list pending a verified method.", "kind":"misc", "hidden":true, "missable":false, "stage":3, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 50,
    "name": "The Truth Is Out There",
    "description": "What the hell just happened?",
    "grade": "bronze",
-   "guide": "Witness something strange."
+   "guide": "The exact trigger is still being confirmed. No particular encounter or location is established by the supplied research, so the vague description should not be turned into a claimed route. Revisit during cleanup when a verified method is available.", "kind":"misc", "hidden":true, "missable":false, "stage":3, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 51,
    "name": "Ten Pin",
    "description": "Bowl 'em over with a melee drive-by.",
    "grade": "bronze",
-   "guide": "Knock someone down with a melee drive-by."
+   "guide": "The description specifies a melee drive-by, but the exact trigger is still being confirmed. A required vehicle, target count or input sequence is not verified here. Do not assume that an ordinary collision satisfies it.", "kind":"misc", "hidden":true, "missable":false, "stage":3, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 52,
    "name": "Dime on the Dollar",
    "description": "Earn $250,000 laundering Marked Bills through your contacts.",
    "grade": "bronze",
-   "guide": "Launder $250,000 of marked bills."
+   "guide": "Collect marked bills from bank and payday-loan jobs and sell them through your contacts. The $250,000 target is cumulative, so keep laundering across multiple jobs. This also advances the 100% fencing requirement.", "kind":"misc", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 53,
    "name": "Treat Yo Self",
    "description": "Spend $100,000 across all shops.",
    "grade": "bronze",
-   "guide": "Spend $100,000 in shops."
+   "guide": "Spend a cumulative $100,000 across shop purchases as you equip both characters. Different shop types contribute, so there is no need to spend the full amount in one transaction or one store. Finish remaining spending during cleanup.", "kind":"misc", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 54,
    "name": "Little Boxes",
    "description": "Purchase all garage properties.",
    "grade": "bronze",
-   "guide": "Buy all 8 garage properties."
+   "guide": "After Daily Driver in Chapter 2, open Vice City Real Estate and buy all eight purchasable garages, costing roughly $160,000 together. Story-granted garages do not count. These spaces also support registering cars for On the Spot.", "kind":"misc", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 55,
    "name": "On the Spot",
    "description": "Register 10 vehicles to the Scooter Bros app.",
    "grade": "bronze",
-   "guide": "Register 10 vehicles in the Scooter Bros app."
+   "guide": "Finish Moses in Chapter 2 to unlock Scooter Bros. Bring a stolen car to Moses, choose Respray and then Register. Each registration needs a free garage space. From Chapter 3, a standard tracker at Pay 'n' Spray is another registration option; repeat for ten vehicles.", "kind":"misc", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   }
  ]
 }

@@ -1,52 +1,33 @@
-// A plain checklist of the 55 trophies: tick one off and it stays ticked (localStorage); export and import the ticks.
-const KEY = 'gta6-trophy-checklist';
-const rows = document.getElementById('rows');
-const grade = document.getElementById('grade');
-let earned = new Set(JSON.parse(localStorage.getItem(KEY) ?? '[]'));
-const doc = await (await fetch('data/trophies.json')).json();
-
-function save() {
-  localStorage.setItem(KEY, JSON.stringify([...earned]));
+const trophies=(await (await fetch('data/trophies.json')).json()).trophies;
+const KEY='leonida-ledger-v1';
+let state;
+try {state=JSON.parse(localStorage.getItem(KEY)||'{"earned":[],"spoilers":true}');if(!Array.isArray(state.earned))throw Error();}
+catch {state={earned:[],spoilers:true};}
+if(new URLSearchParams(location.search).has('sample')&&!localStorage.getItem(KEY)){state={earned:[2,3,4,8,9,16,20,21,35,42,48,53],spoilers:true,sample:true};save();}
+let kind='all',selected=28;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function save(){localStorage.setItem(KEY,JSON.stringify(state));}
+function concealed(t){return state.spoilers&&t.kind==='story'&&!state.earned.includes(t.id);}
+function render(){
+ $('spoilers').checked=state.spoilers;
+ $('summary').innerHTML=`<strong>${state.earned.length} / 55</strong> earned · Saved on this device <span style="float:right">${['platinum','gold','silver','bronze'].map(g=>`${g} ${trophies.filter(t=>t.grade===g&&state.earned.includes(t.id)).length}/${trophies.filter(t=>t.grade===g).length}`).join(' · ')}</span><progress value="${state.earned.length}" max="55"></progress>`;
+ $('sample').innerHTML=state.sample?'Sample progress — clear it to start your own <button id="clear">Clear sample</button>':'';
+ if($('clear'))$('clear').onclick=()=>{state.earned=[];state.sample=false;save();render();};
+ $('filters').innerHTML=['all','story','missable','collectibles','activities','misc'].map(k=>`<button data-kind="${k}" class="${k===kind?'active':''}">${k} · ${trophies.filter(t=>k==='all'||t.kind===k).length}</button>`).join('');
+ $('filters').querySelectorAll('button').forEach(b=>b.onclick=()=>{kind=b.dataset.kind;location.hash='filter='+kind;render();});
+ const list=trophies.filter(t=>(kind==='all'||t.kind===kind)&&($('grade').value==='all'||t.grade===$('grade').value)&&($('status').value==='all'||state.earned.includes(t.id)===($('status').value==='earned'))&&(!concealed(t)?t.name.toLowerCase().includes($('search').value.toLowerCase()):!$('search').value));
+ $('rows').innerHTML=`<small>${list.length} TROPHIES IN THIS VIEW</small>`+list.map(t=>`<div class="row"><input aria-label="Mark trophy ${t.id} earned" type="checkbox" data-id="${t.id}" ${state.earned.includes(t.id)?'checked':''}><button data-open="${t.id}"><strong>${concealed(t)?'Hidden story trophy — earn it to reveal':esc(t.name)}</strong><p>${concealed(t)?'Story details protected':esc(t.description)}</p><span class="grade"><i class="disc ${t.grade}"></i>${t.grade} · ${t.kind}${t.missable?' · MISSABLE':''}</span></button></div>`).join('');
+ $('rows').querySelectorAll('input').forEach(b=>b.onchange=()=>{state.earned=b.checked?[...state.earned,Number(b.dataset.id)]:state.earned.filter(id=>id!==Number(b.dataset.id));save();render();});
+ $('rows').querySelectorAll('button').forEach(b=>b.onclick=()=>{location.hash='trophy='+b.dataset.open;});
+ const t=trophies.find(t=>t.id===selected)||trophies[0];
+ $('detail').innerHTML=`<span class="tag">FIELD NOTES / ${t.missable?'MISSABLE':'TROPHY GUIDE'}</span><h2>${concealed(t)?'Hidden story trophy — earn it to reveal':esc(t.name)}</h2><span class="grade">${t.grade} / ${t.kind} / STAGE ${t.stage}</span><p>${concealed(t)?'Earn this trophy to reveal its description and guide.':esc(t.description)}</p>${concealed(t)?'':`<p>${esc(t.guide)}</p><ol>${(t.steps||[]).map(s=>`<li>${esc(s)}</li>`).join('')}</ol><small>SOURCES / READ FURTHER</small><p>${t.sources.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noreferrer">${esc(s.name)} ↗</a>`).join('<br>')}</p>`}`;
+ const road=location.hash==='#roadmap';document.body.classList.toggle('focused',road||location.hash.startsWith('#trophy=')||kind==='missable');$('workspace').hidden=road;$('roadmap').hidden=!road;
 }
-
-function render() {
-  rows.replaceChildren();
-  for (const t of doc.trophies) {
-    if (grade.value !== 'all' && t.grade !== grade.value) continue;
-    const tr = document.createElement('tr');
-    const box = document.createElement('input');
-    box.type = 'checkbox';
-    box.checked = earned.has(t.name);
-    box.addEventListener('change', () => {
-      if (box.checked) earned.add(t.name);
-      else earned.delete(t.name);
-      save();
-      render();
-    });
-    const cells = [box, `${t.name}\n${t.description}`, t.grade, t.guide];
-    for (const c of cells) {
-      const td = document.createElement('td');
-      if (typeof c === 'string') td.textContent = c;
-      else td.append(c);
-      tr.append(td);
-    }
-    rows.append(tr);
-  }
-  document.getElementById('progress').textContent = `${earned.size} of ${doc.trophies.length} earned`;
-}
-
-document.getElementById('export').addEventListener('click', () => {
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([JSON.stringify([...earned])], { type: 'application/json' }));
-  a.download = 'trophy-progress.json';
-  a.click();
-});
-document.getElementById('import').addEventListener('change', async (e) => {
-  const file = e.target.files[0];
-  if (!file) return;
-  earned = new Set(JSON.parse(await file.text()));
-  save();
-  render();
-});
-grade.addEventListener('change', render);
-render();
+$('roadmap').innerHTML=`<h2>Your route to a Leonida legend.</h2><p class="warning"><b>ONE MISSABLE / Positive Mental Attitude</b> — After Down to Earth, join Lucia on Jason's balcony in Chapter 1. Keep a Chapter 1 manual save until all 18 meditations are done. No mission replay or New Game Plus. Balcony requirement is not fully confirmed: do it anyway.</p><div class="stages"><article><small>01 / 60–80 HOURS</small><h3>Story first</h3><p>Gone Fishing → Chapters 1–4 → final mission. Five chapters in total.</p><p>Save at each chapter boundary and before the finale; 15 manual slots. In Chapter 3, save before the hourglass-marked Race Against Yago and do it immediately.</p><p>Scan traffic and study animals early: 200 base models and 100 animals for 100%. Avoid cheats: they disable trophies and saving.</p></article><article><small>02 / ABOUT 100 HOURS</small><h3>Build to 100%</h3><p>Progress → Stats → 100% Completion. Fund gear through robberies and fencing.</p><p>39 gang operations, 22 bank jobs, 7 payday loans, 8 vaults. Cards 15 sets; WAiNK 100; underwater discoveries 33; flamingos 100.</p><p>30 race wins, 42 range golds, 42 drone trials, 300 stunts, 70 challenges, 15 Bret target decks. See A Long Road for the full list.</p></article><article><small>03 / 10–20 HOURS</small><h3>Close loose ends</h3><p>Finish 8 qualifying stranger strands. Andy, Billy and Tyrone do not count toward that total.</p><p>Finish Andy, Kenton, Billy, Randy and Tyrone's finales. Meditate at all 18 spots (100% only needs 15).</p><p>Earn the other 54 for Vice Got a Price! Approximately 200 hours, one playthrough, difficulty 4/10.</p><small>SOURCES: KEENGAMER / GTABASE</small></article></div>`;
+for(const id of ['search','grade','status'])$(id).oninput=render;
+$('spoilers').onchange=()=>{state.spoilers=$('spoilers').checked;save();render();};
+$('export').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'}));a.download='leonida-progress.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
+$('import').onchange=async e=>{try{const s=JSON.parse(await e.target.files[0].text());if(!Array.isArray(s.earned)||s.earned.some(id=>!trophies.some(t=>t.id===id)))throw Error('Invalid trophy IDs');state={earned:[...new Set(s.earned)],spoilers:s.spoilers!==false,sample:!!s.sample};save();render();$('notice').textContent='Progress restored.';}catch{$('notice').textContent='Could not import: choose a valid progress JSON file.'}};
+function route(){const h=location.hash.slice(1);if(h.startsWith('trophy='))selected=Number(h.split('=')[1]);if(h.startsWith('filter='))kind=h.split('=')[1];if(h==='spoilers=on'){state.spoilers=true;save();}render();}
+window.onhashchange=route;route();
