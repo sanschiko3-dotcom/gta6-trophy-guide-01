@@ -1,6 +1,6 @@
 [
-  {"file":"1-checklist.png","path":"/?sample=1","viewport":{"width":1280,"height":800}},
-  {"file":"2-guide.png","path":"/?sample=1#trophy=28","viewport":{"width":1280,"height":800}},
-  {"file":"3-roadmap.png","path":"/?sample=1#roadmap","viewport":{"width":1280,"height":800}},
-  {"file":"4-missable.png","path":"/?sample=1#filter=missable","viewport":{"width":1280,"height":800}}
+ {"file":"1-checklist.png","path":"/?sample=1","viewport":{"width":1280,"height":800},"description":"Official descriptions, grade words, audit strip, saved sample totals, stage progress, filters, sort and spoiler protection."},
+ {"file":"2-guide.png","path":"/?sample=1#trophy=28","viewport":{"width":1280,"height":800},"description":"Positive Mental Attitude: missable banner, full guide, numbered steps, target and visible named source links."},
+ {"file":"3-roadmap.png","path":"/?sample=1#roadmap","viewport":{"width":1280,"height":800},"description":"Three-stage route with chapter and mission anchors, missable warning and 100% completion counts table."},
+ {"file":"4-missable.png","path":"/?sample=1#filter=missable","viewport":{"width":1280,"height":800},"description":"Single missable trophy isolated with spoiler protection enabled, official description and target 18."}
 ]
