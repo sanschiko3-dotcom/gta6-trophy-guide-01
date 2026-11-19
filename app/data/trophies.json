@@ -197,7 +197,7 @@
    "name": "Positive Mental Attitude",
    "description": "Meditate at every spot across Leonida.",
    "grade": "bronze",
-   "guide": "Visit all 18 meditation spots. Protect the Chapter 1 balcony encounter: after Down to Earth, find Lucia at Jason's house in the morning, follow her onto the balcony and accept meditation. It disappears after Chapter 1. Its necessity is not fully confirmed: do it anyway and keep a Chapter 1 save until the trophy pops. No mission replay or New Game Plus can recover it. Outdoor spots count for both characters when you bring your partner; 100% only requires 15 meditations, but this trophy requires all 18.", "kind":"missable", "hidden":false, "missable":true, "stage":1, "steps":["Keep a manual Chapter 1 save; there are 15 slots.","After Down to Earth, join Lucia's morning balcony meditation.","Bring your partner to outdoor spots and finish all 18.","Retain the early save until the trophy unlocks."], "sources":[{"name":"Keengamer — trophy guide & roadmap","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
+   "guide": "Visit all 18 meditation spots. Protect the Chapter 1 balcony encounter: after Down to Earth, find Lucia at Jason's house in the morning, follow her onto the balcony and accept meditation. It disappears after Chapter 1. Its necessity is not fully confirmed: do it anyway and keep a Chapter 1 save until the trophy pops. No mission replay or New Game Plus can recover it. Outdoor spots count for both characters when you bring your partner; 100% only requires 15 meditations, but this trophy requires all 18.", "kind":"missable", "hidden":true, "missable":true, "stage":1, "steps":["Keep a manual Chapter 1 save; there are 15 slots.","After Down to Earth, join Lucia's morning balcony meditation.","Bring your partner to outdoor spots and finish all 18.","Retain the early save until the trophy unlocks."], "sources":[{"name":"Keengamer — trophy guide & roadmap","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 29,
@@ -274,7 +274,7 @@
    "name": "Sneakthief",
    "description": "Rob a jewelry store without being detected.",
    "grade": "bronze",
-   "guide": "Complete Yasmani's Jewelry Jobs in Chapter 3 for the Snap Gun. At Richardson Jewelry & Diamonds in Vice City, use it on the back door instead of kicking the door. Read the safe-code note in the back room, empty the safe and leave unseen. Reload if detected.", "kind":"misc", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
+   "guide": "Complete Yasmani's Jewelry Jobs in Chapter 3 for the Snap Gun. At Richardson Jewelry & Diamonds in Vice City, use it on the back door instead of kicking the door. Read the safe-code note in the back room, empty the safe and leave unseen. Reload if detected.", "kind":"misc", "hidden":true, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 40,
@@ -337,7 +337,7 @@
    "name": "Actions Speak Louder",
    "description": "Choices made (for better or worse).",
    "grade": "bronze",
-   "guide": "Perform 500 actions that alter your Criminal Profile. Robberies and fights contribute, so work through the completion route before considering a separate grind. This cumulative target can be finished after the campaign.", "kind":"misc", "hidden":true, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
+   "guide": "Perform 500 actions that alter your Criminal Profile. Robberies and fights contribute, so work through the completion route before considering a separate grind. This cumulative target can be finished after the campaign.", "kind":"misc", "hidden":false, "missable":false, "stage":2, "sources":[{"name":"Keengamer","url":"https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"}]
   },
   {
    "id": 49,
