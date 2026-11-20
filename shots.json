@@ -1,6 +1,26 @@
 [
-  {"file":"1-checklist.png","path":"/?sample=1","viewport":{"width":1280,"height":800}},
-  {"file":"2-guide.png","path":"/?sample=1#trophy=28","viewport":{"width":1280,"height":800}},
-  {"file":"3-roadmap.png","path":"/?sample=1#roadmap","viewport":{"width":1280,"height":800}},
-  {"file":"4-missable.png","path":"/?sample=1#filter=missable","viewport":{"width":1280,"height":800}}
+  {
+    "file": "1-checklist.png",
+    "path": "/?sample=1",
+    "caption": "Cover: audit strip, saved sample progress, grade-word totals, filters, spoiler setting, and the first roadmap-ordered trophies.",
+    "viewport": { "width": 1280, "height": 800 }
+  },
+  {
+    "file": "2-guide.png",
+    "path": "/?sample=1#trophy=28",
+    "caption": "Positive Mental Attitude: the Chapter 1 missable warning, practical steps, and named source links.",
+    "viewport": { "width": 1280, "height": 800 }
+  },
+  {
+    "file": "3-roadmap.png",
+    "path": "/#roadmap",
+    "caption": "Three route stages, the meditation save warning, chapter anchors, and verified 100% completion counts.",
+    "viewport": { "width": 1280, "height": 800 }
+  },
+  {
+    "file": "4-missable.png",
+    "path": "/?sample=1#filter=missable&spoilers=on",
+    "caption": "Missable-only filter with spoiler protection enabled and sample progress labelled.",
+    "viewport": { "width": 1280, "height": 800 }
+  }
 ]
